@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="524.0" prefWidth="757.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retailsfinal1.LoginController">
+    <stylesheets>
+        <URL value="@/retailsfinal1/style/login.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="524.0" prefWidth="247.0" style="-fx-background-color: blue;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <FontAwesomeIconView glyphName="GOOGLE_WALLET" layoutX="58.0" layoutY="203.0" size="100" style="-fx-fill: #ffff;" wrappingWidth="115.0" />
+            <Label layoutX="26.0" layoutY="254.0" prefHeight="86.0" prefWidth="198.0" text="Retails" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="59.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="textLogin" layoutX="311.0" layoutY="160.0" prefHeight="62.0" prefWidth="381.0" promptText="E-mail Or Phone" AnchorPane.leftAnchor="311.0" AnchorPane.rightAnchor="65.0">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="errorForm" alignment="CENTER" layoutX="311.0" layoutY="59.0" prefHeight="47.0" prefWidth="381.0" textFill="#e81313">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font></Label>
+      <JFXButton fx:id="btnLogin" layoutX="350.0" layoutY="399.0" onAction="#validationForm" prefHeight="47.0" prefWidth="302.0" style="-fx-background-color: blue;" text="Login" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXPasswordField fx:id="textPassword" layoutX="311.0" layoutY="269.0" prefHeight="47.0" prefWidth="381.0" promptText="Password" AnchorPane.leftAnchor="311.0" AnchorPane.rightAnchor="65.0">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </JFXPasswordField>
+   </children>
+</AnchorPane>

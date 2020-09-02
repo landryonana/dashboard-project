@@ -1,0 +1,33 @@
+
+.menu-button{
+    -fx-background-color: white;
+}
+
+.menu-button:hover{
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+}
+
+.menu{
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+}
+
+JFXButton:hover{
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+}
+    
+.chart-bar {
+    -fx-bar-fill: blue; 
+}
+
+.chart-content{
+    -fx-padding: 2;
+}
+
+.default-color0.chart-pie{
+    -fx-pie-color:blue;
+}
+    
+   

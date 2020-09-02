@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="579.0" prefWidth="834.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retailsfinal1.ProfileUserController">
+    <stylesheets>
+        <URL value="@/retailsfinal1/style/profileuser.css" />
+    </stylesheets>
+   <children>
+      <Label alignment="CENTER" layoutX="454.0" layoutY="38.0" prefHeight="51.0" prefWidth="264.0" text="Modifier compte">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="579.0" prefWidth="304.0" style="-fx-background-color: blue;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="8.0" layoutY="137.0" prefHeight="31.0" prefWidth="76.0" text="Nom" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="182.0" prefHeight="31.0" prefWidth="76.0" text="Prenom" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="223.0" prefHeight="31.0" prefWidth="76.0" text="Email" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="263.0" prefHeight="31.0" prefWidth="76.0" text="Phone" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="307.0" prefHeight="31.0" prefWidth="76.0" text="Role" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="137.0" prefHeight="31.0" prefWidth="216.0" style="-fx-background-color: white;" text="Label" textFill="WHITE" />
+            <Label layoutX="84.0" layoutY="182.0" prefHeight="31.0" prefWidth="216.0" style="-fx-background-color: white;" text="Label" textFill="WHITE" />
+            <Label layoutX="84.0" layoutY="223.0" prefHeight="31.0" prefWidth="216.0" style="-fx-background-color: white;" text="Label" textFill="WHITE" />
+            <Label layoutX="84.0" layoutY="264.0" prefHeight="31.0" prefWidth="216.0" style="-fx-background-color: white;" text="Label" textFill="WHITE" />
+            <Label layoutX="85.0" layoutY="307.0" prefHeight="31.0" prefWidth="216.0" style="-fx-background-color: white;" text="Label" textFill="WHITE" />
+            <MaterialDesignIconView glyphName="ACCOUNT" layoutX="102.0" layoutY="102.0" size="100" style="-fx-fill: white;" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="378.0" layoutY="125.0" prefHeight="31.0" prefWidth="76.0" text="Nom" textFill="#010117">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="378.0" layoutY="170.0" prefHeight="31.0" prefWidth="76.0" text="Prenom" textFill="#010117">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="378.0" layoutY="211.0" prefHeight="31.0" prefWidth="76.0" text="Email" textFill="#010117">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="378.0" layoutY="251.0" prefHeight="31.0" prefWidth="76.0" text="Phone" textFill="#010117">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="354.0" layoutY="295.0" prefHeight="31.0" prefWidth="100.0" text="PassWord" textFill="#010117">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="454.0" layoutY="128.0" prefHeight="25.0" prefWidth="289.0" AnchorPane.leftAnchor="454.0" AnchorPane.rightAnchor="91.0" />
+      <TextField layoutX="454.0" layoutY="173.0" prefHeight="25.0" prefWidth="289.0" AnchorPane.leftAnchor="454.0" AnchorPane.rightAnchor="91.0" />
+      <TextField layoutX="454.0" layoutY="214.0" prefHeight="25.0" prefWidth="289.0" AnchorPane.leftAnchor="454.0" AnchorPane.rightAnchor="91.0" />
+      <TextField layoutX="454.0" layoutY="254.0" prefHeight="25.0" prefWidth="289.0" AnchorPane.leftAnchor="454.0" AnchorPane.rightAnchor="91.0" />
+      <TextField layoutX="454.0" layoutY="298.0" prefHeight="25.0" prefWidth="289.0" AnchorPane.leftAnchor="454.0" AnchorPane.rightAnchor="91.0" />
+      <JFXButton layoutX="454.0" layoutY="401.0" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #d32121;" text="Reset" textFill="#f8f4f4">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="620.0" layoutY="401.0" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #1bc258;" text="Modifier" textFill="#e5eae7">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="378.0" layoutY="337.0" prefHeight="31.0" prefWidth="76.0" text="Role" textFill="#010117">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="roleUserProfile" layoutX="454.0" layoutY="340.0" prefHeight="25.0" prefWidth="289.0" promptText="-----Selectionner un Role-------" AnchorPane.leftAnchor="454.0" AnchorPane.rightAnchor="91.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="458.0" prefWidth="1077.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retailsfinal1.ListeDeclarationInterruptionController">
+    <stylesheets>
+        <URL value="@/retailsfinal1/style/retails.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="36.0" layoutY="15.0" prefHeight="36.0" prefWidth="355.0" text="LISTE DECLARATION D'INTERRUPTION">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="36.0" layoutY="77.0" prefHeight="30.0" prefWidth="81.0" style="-fx-background-color: blue;" text="PDF" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="137.0" layoutY="77.0" prefHeight="30.0" prefWidth="81.0" style="-fx-background-color: blue;" text="EXCEL" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tabViewInteruption" layoutX="35.0" layoutY="123.0" prefHeight="315.0" prefWidth="1007.0">
+        <columns>
+          <TableColumn fx:id="coloneDateInteruption" prefWidth="99.0" text="DATE" />
+          <TableColumn fx:id="coloneHeureInteruption" prefWidth="122.0" text="HEURE" />
+            <TableColumn fx:id="coloneBandePassanteInteruption" prefWidth="135.0" text="BANDE P" />
+            <TableColumn fx:id="coloneSiteInteruption" prefWidth="123.0" text="SITE" />
+            <TableColumn fx:id="coloneEtatInteruption" prefWidth="128.0" text="ETAT" />
+            <TableColumn fx:id="coloneDisponibiliteInteruption" prefWidth="102.0" text="DISPONIBILITE" />
+            <TableColumn fx:id="colonePenaliteInteruption" prefWidth="113.0" text="PENALITE" />
+            <TableColumn fx:id="coloneActionInteruption" minWidth="150.0" prefWidth="184.0" text="ACTION" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

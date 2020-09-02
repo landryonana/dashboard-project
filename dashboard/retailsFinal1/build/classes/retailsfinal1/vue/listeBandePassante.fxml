@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="458.0" prefWidth="859.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retailsfinal1.ListeBandePassanteController">
+   <children>
+      <Label layoutX="56.0" layoutY="35.0" prefHeight="36.0" prefWidth="231.0" text="LISTE BANDE PASSANTE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="56.0" layoutY="97.0" prefHeight="30.0" prefWidth="81.0" style="-fx-background-color: blue;" text="PDF" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tableBandePassanteSite" layoutX="56.0" layoutY="142.0" prefHeight="300.0" prefWidth="766.0">
+         <columns>
+            <TableColumn fx:id="coloneDateBandePassante" prefWidth="188.0" text="DATE" />
+            <TableColumn fx:id="coloneHeureBandePassante" prefWidth="218.0" text="HEURE" />
+            <TableColumn fx:id="coloneValeurBandePassante" prefWidth="196.0" text="BANDE P" />
+            <TableColumn fx:id="coloneSiteBandePassante" prefWidth="163.0" text="SITE" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="152.0" layoutY="97.0" prefHeight="30.0" prefWidth="81.0" style="-fx-background-color: blue;" text="EXCEL" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

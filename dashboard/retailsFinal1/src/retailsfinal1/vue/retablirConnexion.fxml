@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPaneRetablirConnexion" prefHeight="422.0" prefWidth="838.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retailsfinal1.RetablirConnexionController">
+    <stylesheets>
+        <URL value="@/retailsfinal1/style/retablirconnexion.css" />
+    </stylesheets>
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="167.0" layoutY="6.0" prefHeight="46.0" prefWidth="490.0" text="RETABLIR INTERUPTION">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="inputDateRetablirConnexion" layoutX="147.0" layoutY="143.0" prefHeight="37.0" prefWidth="214.0" AnchorPane.leftAnchor="147.0" />
+      <Label layoutX="99.0" layoutY="143.0" prefHeight="37.0" prefWidth="48.0" text="DATE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputHeureRetablirConnexion" layoutX="550.0" layoutY="142.0" prefHeight="37.0" prefWidth="214.0" />
+      <Label layoutX="491.0" layoutY="143.0" prefHeight="37.0" prefWidth="59.0" text="HEURE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputBandePassanteRetablirConnexion" layoutX="147.0" layoutY="213.0" prefHeight="37.0" prefWidth="214.0" />
+      <Label layoutX="19.0" layoutY="212.0" prefHeight="37.0" prefWidth="127.0" text="BANDE PASSANTE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="482.0" layoutY="213.0" prefHeight="37.0" prefWidth="67.0" text="FICHIER">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnFileRetablirConnexion" layoutX="550.0" layoutY="212.0" mnemonicParsing="false" onAction="#choseFileHandler" prefHeight="37.0" prefWidth="214.0" text="Telecharger fichier">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <JFXButton fx:id="btnEnregistrerRetablirConnexion" buttonType="RAISED" layoutX="338.0" layoutY="360.0" onAction="#AjouterRetablirInteruption" prefHeight="37.0" prefWidth="183.0" style="-fx-background-color: blue;" text="ENREGISTRER" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <TextArea fx:id="PathFileRetablirConnexion" layoutX="550.0" layoutY="262.0" prefHeight="37.0" prefWidth="214.0" />
+      <Label fx:id="labelErrorRetablirInteruption" alignment="CENTER" layoutX="187.0" layoutY="54.0" prefHeight="37.0" prefWidth="513.0" style="-fx-text-fill: red;">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

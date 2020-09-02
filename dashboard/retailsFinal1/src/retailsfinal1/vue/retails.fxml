@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1388.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retailsfinal1.retailsController">
+    <children>
+        <BorderPane prefHeight="739.0" prefWidth="1121.0" stylesheets="@/retailsfinal1/style/retails.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <AnchorPane fx:id="paneSide" prefHeight="667.0" prefWidth="213.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                    <children>
+                        <JFXButton fx:id="btn_admin" accessibleText="tableauBord" alignment="CENTER" buttonType="RAISED" layoutX="-1.0" layoutY="-1.0" onAction="#actionButtonSidePane" prefHeight="47.0" prefWidth="215.0" style="-fx-cursor: HAND;" text="Tableau de bord">
+                            <opaqueInsets>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </opaqueInsets>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_yd" accessibleText="yaounde" alignment="CENTER" layoutX="1.0" layoutY="93.0" onAction="#actionButtonSidePane" prefHeight="47.0" prefWidth="213.0" style="-fx-cursor: HAND;" text="YAOUNDE" />
+                        <JFXButton fx:id="btnBonaberie" accessibleText="bonaberie" alignment="CENTER" layoutX="1.0" layoutY="187.0" onAction="#actionButtonSidePane" prefHeight="47.0" prefWidth="213.0" style="-fx-cursor: HAND;" text="BONABERI" />
+                        <JFXButton fx:id="btnLimbe" accessibleText="limbe" alignment="CENTER" layoutX="1.0" layoutY="140.0" onAction="#actionButtonSidePane" prefHeight="47.0" prefWidth="213.0" style="-fx-cursor: HAND;" text="LIMBE" />
+                        <JFXButton fx:id="btnBamenda" accessibleText="bamenda" alignment="CENTER" layoutX="1.0" layoutY="234.0" onAction="#actionButtonSidePane" prefHeight="47.0" prefWidth="213.0" style="-fx-cursor: HAND;" text="BAMENDA" />
+                        <MenuButton fx:id="btnSiege" accessibleText="menuButton" ellipsisString="" graphicTextGap="50.0" layoutY="47.0" lineSpacing="10.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="214.0" style="-fx-cursor: HAND;" text="SIEGE" textAlignment="JUSTIFY" textFill="#0a0a0a">
+                            <items>
+                                <MenuItem fx:id="btnRouteur" mnemonicParsing="false" onAction="#actionButtonSidePane" text="Routeur" />
+                                <MenuItem fx:id="btnOrange" mnemonicParsing="false" onAction="#actionButtonSidePane" text="Orange" />
+                            </items>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="USER" size="30" style="-fx-fill: #33cc33;" />
+                            </graphic>
+                        </MenuButton>
+                        <FontAwesomeIconView glyphName="HOME" layoutX="4.0" layoutY="33.0" size="30" style="-fx-fill: BLUE;" wrappingWidth="19.142857551574707" />
+                        <FontAwesomeIconView layoutX="8.0" layoutY="124.0" size="30" style="-fx-fill: ORANGE;" />
+                        <FontAwesomeIconView glyphName="SHARE_ALT" layoutX="7.0" layoutY="172.0" size="30" style="-fx-fill: #cccc00;" />
+                        <FontAwesomeIconView glyphName="HISTORY" layoutX="8.0" layoutY="218.0" size="30" style="-fx-fill: #db4dff;" />
+                        <OctIconView glyphName="GRAPH" layoutX="10.0" layoutY="265.0" size="30" style="-fx-fill: #66ffb3;" wrappingWidth="13.0" />
+                    </children>
+                </AnchorPane>
+            </left>
+            <top>
+                <AnchorPane fx:id="anchorPaneHeader" prefHeight="48.0" prefWidth="1033.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                    <effect>
+                        <DropShadow height="24.04" radius="10.76" />
+                    </effect>
+                    <children>
+                        <Label layoutX="24.0" layoutY="9.0" prefHeight="26.0" prefWidth="102.0" text="Retail">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <MenuButton layoutX="484.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="59.0" style="-fx-background-color: white; -fx-cursor: HAND;" text="EN" AnchorPane.rightAnchor="578.0">
+                            <items>
+                                <MenuItem fx:id="btnFr" mnemonicParsing="false" text="FR" />
+                            </items>
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </MenuButton>
+                        <MenuButton fx:id="btnMenuUser" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutX="617.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="208.0" style="-fx-background-color: white; -fx-cursor: HAND;" text="Bienvenue utilisateur" AnchorPane.rightAnchor="296.0">
+                            <items>
+                                <MenuItem fx:id="btnProfile" mnemonicParsing="false" onAction="#profilUser" text="Mon Profile" />
+                                <MenuItem fx:id="btnCreerUser" mnemonicParsing="false" onAction="#creerUser" text="Créer Utilisateur" />
+                            </items>
+                            <graphic>
+                                <MaterialDesignIconView glyphName="ACCOUNT_CIRCLE" size="20" />
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </MenuButton>
+                        <Button fx:id="deconnecter" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="905.0" layoutY="10.0" mnemonicParsing="false" onAction="#handlerDeconnection" prefHeight="31.0" prefWidth="148.0" style="-fx-background-color: white; -fx-cursor: HAND;" text="Se Déconnecter" AnchorPane.rightAnchor="68.0">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="POWER_OFF" size="20" style="-fx-fill: red;" />
+                            </graphic>
+                        </Button>
+                        <Separator layoutX="571.0" layoutY="3.0" orientation="VERTICAL" prefHeight="40.0" prefWidth="4.0" AnchorPane.rightAnchor="544.0" />
+                        <JFXButton fx:id="btnBar2" contentDisplay="CENTER" layoutX="161.0" layoutY="5.0" onAction="#runBar2" prefHeight="36.0" prefWidth="55.0" style="-fx-cursor: HAND;" text=" ">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="BARS" size="23" />
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnBar1" contentDisplay="CENTER" layoutX="161.0" layoutY="3.0" onAction="#runBar1" prefHeight="36.0" prefWidth="55.0" style="-fx-cursor: HAND;" text=" ">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="BARS" size="23" />
+                            </graphic>
+                        </JFXButton>
+                    </children>
+                </AnchorPane>
+            </top>
+            <center>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane fx:id="paneYaounde" accessibleText="paneYaounde" prefHeight="702.0" prefWidth="1174.0" style="-fx-background-color: #d3cccc;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label fx:id="nomSiteYaounde" alignment="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="38.0" prefWidth="182.0" style="-fx-background-color: white;" text="YAOUNDE" textFill="#221c1c">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                                <AnchorPane layoutX="14.0" layoutY="54.0" prefHeight="41.0" prefWidth="1115.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <Label layoutX="66.0" layoutY="15.0" prefHeight="26.0" prefWidth="33.0" text="De" />
+                                        <JFXDatePicker layoutX="103.0" layoutY="11.0" />
+                                        <Label layoutX="312.0" layoutY="14.0" prefHeight="26.0" prefWidth="21.0" text="A" />
+                                        <JFXDatePicker layoutX="337.0" layoutY="9.0" />
+                                        <JFXComboBox fx:id="ComboxYaounde" layoutX="597.0" layoutY="10.0" prefHeight="26.0" prefWidth="182.0" promptText="------critère-----" />
+                                        <JFXButton fx:id="btnRechercheYaounde" buttonType="RAISED" layoutX="793.0" layoutY="11.0" onAction="#handleRechercheYaounde" prefHeight="26.0" prefWidth="148.0" ripplerFill="#371de0" style="-fx-background-color: #371de0;" text="Recherche" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="11.0" layoutY="107.0" prefHeight="555.0" prefWidth="1115.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <BarChart fx:id="chartYaoundeInterup" layoutY="56.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de frequence d'interuption">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartYaoundeIndispo" layoutY="322.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation de taux d'indisponibilite">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartYaoundePenaliteSite" layoutX="606.0" layoutY="322.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation du taux de pénalité par site">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartYaoundeBandePassante" layoutX="613.0" layoutY="56.0" legendVisible="false" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation bande passante">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <JFXButton fx:id="btnAjouterBandePassanteYaounde" layoutX="634.0" layoutY="4.0" onAction="#ajouterBantePassanteYaounde" prefHeight="38.0" prefWidth="414.0" style="-fx-background-color: blue;" text="AJOUTER BANDE PASSANTE" textFill="WHITE">
+                                            <font>
+                                                <Font size="21.0" />
+                                            </font>
+                                        </JFXButton>
+                                        <JFXButton fx:id="btnDeclarationInteruptionYaounde" layoutX="42.0" layoutY="4.0" onAction="#declarationInteruptionYaounde" prefHeight="38.0" prefWidth="414.0" style="-fx-background-color: blue;" text="DECLARATION D'INTERUPTION" textFill="WHITE">
+                                            <font>
+                                                <Font size="21.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="paneLimbe" accessibleText="paneLimbe" prefHeight="702.0" prefWidth="1174.0" style="-fx-background-color: #d3cccc;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label fx:id="nomSiteLimbe" alignment="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="38.0" prefWidth="182.0" style="-fx-background-color: white;" text="LIMBE" textFill="#221c1c">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                                <AnchorPane layoutX="14.0" layoutY="55.0" prefHeight="41.0" prefWidth="1120.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <Label layoutX="70.0" layoutY="9.0" prefHeight="26.0" prefWidth="33.0" text="De">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Label>
+                                        <JFXDatePicker layoutX="103.0" layoutY="9.0" />
+                                        <Label layoutX="312.0" layoutY="14.0" prefHeight="26.0" prefWidth="21.0" text="A">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Label>
+                                        <JFXDatePicker layoutX="337.0" layoutY="9.0" />
+                                        <JFXComboBox fx:id="ComboxLimbe" layoutX="597.0" layoutY="7.0" prefHeight="26.0" prefWidth="182.0" promptText="------critère-----" AnchorPane.rightAnchor="336.0" />
+                                        <JFXButton fx:id="btnRechercheLimbe" buttonType="RAISED" layoutX="793.0" layoutY="5.0" onAction="#handlerRechercheLimbe" prefHeight="26.0" prefWidth="148.0" ripplerFill="#371de0" style="-fx-background-color: #371de0;" text="Recherche" textFill="WHITE" AnchorPane.rightAnchor="174.0">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="17.0" layoutY="107.0" prefHeight="555.0" prefWidth="1115.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <BarChart fx:id="chartLimbeInterup" layoutY="57.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de frequence d'interuption">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartLimbeIndispo" layoutX="-3.0" layoutY="319.0" legendVisible="false" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation de taux d'indisponibilite">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartLimbePenalite" layoutX="563.0" layoutY="319.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation du taux de pénalité par site">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartLimbeBandePassante" layoutX="563.0" layoutY="59.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation bande passante">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <JFXButton fx:id="btnAjouterBandePassanteLimbe" layoutX="624.0" layoutY="5.0" onAction="#ajouterBantePassanteLimbe" prefHeight="45.0" prefWidth="428.0" style="-fx-background-color: blue;" text="AJOUTER BANDE PASSANTE" textFill="WHITE" AnchorPane.rightAnchor="63.0">
+                                            <font>
+                                                <Font size="21.0" />
+                                            </font>
+                                        </JFXButton>
+                                        <JFXButton fx:id="btnDeclarationInteruptionLimbe" layoutX="34.0" layoutY="5.0" onAction="#declarationInteruptionLimbe" prefHeight="45.0" prefWidth="428.0" style="-fx-background-color: blue;" text="DECLARATION D'INTERUPTION" textFill="WHITE" AnchorPane.rightAnchor="653.0">
+                                            <font>
+                                                <Font size="21.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="paneBamenda" accessibleText="paneBamenda" prefHeight="702.0" prefWidth="1174.0" style="-fx-background-color: #d3cccc;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label fx:id="nomSiteBamenda" alignment="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="38.0" prefWidth="182.0" style="-fx-background-color: white;" text="BAMENDA" textFill="#221c1c">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                                <AnchorPane layoutX="14.0" layoutY="54.0" prefHeight="41.0" prefWidth="1115.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <Label layoutX="66.0" layoutY="15.0" prefHeight="26.0" prefWidth="33.0" text="De" />
+                                        <JFXDatePicker layoutX="103.0" layoutY="11.0" />
+                                        <Label layoutX="312.0" layoutY="14.0" prefHeight="26.0" prefWidth="21.0" text="A" />
+                                        <JFXDatePicker layoutX="337.0" layoutY="9.0" />
+                                        <JFXComboBox fx:id="ComboxBamenda" layoutX="597.0" layoutY="10.0" prefHeight="26.0" prefWidth="182.0" promptText="------critère-----" />
+                                        <JFXButton fx:id="btnRechercheBamenda" buttonType="RAISED" layoutX="793.0" layoutY="11.0" onAction="#handlerRechercheBamenda" prefHeight="26.0" prefWidth="148.0" ripplerFill="#371de0" style="-fx-background-color: #371de0;" text="Recherche" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="11.0" layoutY="107.0" prefHeight="555.0" prefWidth="1115.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <BarChart fx:id="chartBamendaInterup" layoutY="58.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de frequence d'interuption">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartBamendaIndispo" layoutY="323.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation de taux d'indisponibilite">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartBamendaPenalite" layoutX="615.0" layoutY="322.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation du taux de pénalité par site">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartBamendaBandePassante" layoutX="613.0" layoutY="58.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation bande passante">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <JFXButton fx:id="btnAjouterBandePassanteBamenda" layoutX="634.0" layoutY="2.0" onAction="#ajouterBantePassanteBamenda" prefHeight="38.0" prefWidth="414.0" style="-fx-background-color: blue;" text="AJOUTER BANDE PASSANTE" textFill="WHITE">
+                                            <font>
+                                                <Font size="21.0" />
+                                            </font>
+                                        </JFXButton>
+                                        <JFXButton fx:id="btnDeclarationInteruptionBamenda" layoutX="42.0" layoutY="2.0" onAction="#declarationInteruptionBamenda" prefHeight="38.0" prefWidth="414.0" style="-fx-background-color: blue;" text="DECLARATION D'INTERUPTION" textFill="WHITE">
+                                            <font>
+                                                <Font size="21.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="paneOrange" accessibleText="paneBonaberie" layoutY="1.0" prefHeight="702.0" prefWidth="1174.0" style="-fx-background-color: #d3cccc;">
+                            <children>
+                                <Label fx:id="nomOrange" alignment="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="38.0" prefWidth="182.0" style="-fx-background-color: white;" text="ORANGE" textFill="#221c1c">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                                <AnchorPane layoutX="14.0" layoutY="54.0" prefHeight="41.0" prefWidth="1115.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <Label layoutX="66.0" layoutY="15.0" prefHeight="26.0" prefWidth="33.0" text="De" />
+                                        <JFXDatePicker layoutX="103.0" layoutY="11.0" />
+                                        <Label layoutX="312.0" layoutY="14.0" prefHeight="26.0" prefWidth="21.0" text="A" />
+                                        <JFXDatePicker layoutX="337.0" layoutY="9.0" />
+                                        <JFXComboBox fx:id="ComboxOrange" layoutX="597.0" layoutY="10.0" prefHeight="26.0" prefWidth="182.0" promptText="------critère-----" />
+                                        <JFXButton fx:id="btnRechercheOrange" buttonType="RAISED" layoutX="793.0" layoutY="11.0" onAction="#handlerRechercheOrange" prefHeight="26.0" prefWidth="148.0" ripplerFill="#371de0" style="-fx-background-color: #371de0;" text="Recherche" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="11.0" layoutY="107.0" prefHeight="555.0" prefWidth="1115.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <BarChart fx:id="chartOrangeInterup" layoutX="-3.0" layoutY="55.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de frequence d'interuption">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartOrangeIndispo" layoutY="315.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation de taux d'indisponibilite">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartOrangePenalite" layoutX="613.0" layoutY="315.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation du taux de pénalité par site">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartOrangeBandePassante" layoutX="613.0" layoutY="55.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation bande passante">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <JFXButton fx:id="btnAjouterBandePassanteOrange" layoutX="631.0" layoutY="3.0" onAction="#ajouterBantePassanteOrange" prefHeight="38.0" prefWidth="414.0" style="-fx-background-color: blue;" text="AJOUTER BANDE PASSANTE" textFill="WHITE">
+                                            <font>
+                                                <Font size="21.0" />
+                                            </font>
+                                        </JFXButton>
+                                        <JFXButton fx:id="btnDeclarationInteruptionOrange" layoutX="41.0" layoutY="3.0" onAction="#declarationInteruptionOrange" prefHeight="38.0" prefWidth="414.0" style="-fx-background-color: blue;" text="DECLARATION D'INTERUPTION" textFill="WHITE">
+                                            <font>
+                                                <Font size="21.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="paneBonaberie" accessibleText="paneBonaberie" prefHeight="702.0" prefWidth="1174.0" style="-fx-background-color: #d3cccc;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label fx:id="nomSiteBonaberie" alignment="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="38.0" prefWidth="182.0" style="-fx-background-color: white;" text="BONABERIE" textFill="#221c1c">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                                <AnchorPane layoutX="14.0" layoutY="54.0" prefHeight="41.0" prefWidth="1115.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <Label layoutX="66.0" layoutY="15.0" prefHeight="26.0" prefWidth="33.0" text="De" />
+                                        <JFXDatePicker layoutX="103.0" layoutY="11.0" />
+                                        <Label layoutX="312.0" layoutY="14.0" prefHeight="26.0" prefWidth="21.0" text="A" />
+                                        <JFXDatePicker layoutX="337.0" layoutY="9.0" />
+                                        <JFXComboBox fx:id="ComboxBonaberie" layoutX="597.0" layoutY="10.0" prefHeight="26.0" prefWidth="182.0" promptText="------critère-----" />
+                                        <JFXButton fx:id="btnRechercheBonaberie" buttonType="RAISED" layoutX="793.0" layoutY="11.0" onAction="#handlerRechercheBonaberie" prefHeight="26.0" prefWidth="148.0" ripplerFill="#371de0" style="-fx-background-color: #371de0;" text="Recherche" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="11.0" layoutY="107.0" prefHeight="555.0" prefWidth="1115.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <BarChart fx:id="chartBonaberieInterup" layoutY="59.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de frequence d'interuption">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartBonaberieIndispo" layoutY="319.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation de taux d'indisponibilite">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartBonaberiePenalite" layoutX="613.0" layoutY="319.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation du taux de pénalité par site">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartBonaberieBandePassante" layoutX="613.0" layoutY="59.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation bande passante">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <JFXButton fx:id="btnAjouterBandePassanteBonaberie" layoutX="631.0" layoutY="4.0" onAction="#ajouterBantePassanteBonaberie" prefHeight="38.0" prefWidth="414.0" style="-fx-background-color: blue;" text="AJOUTER BANDE PASSANTE" textFill="WHITE">
+                                            <font>
+                                                <Font size="21.0" />
+                                            </font>
+                                        </JFXButton>
+                                        <JFXButton fx:id="btnDeclarationInteruptionBonaberie" layoutX="38.0" layoutY="4.0" onAction="#declarationInteruptionBonaberie" prefHeight="38.0" prefWidth="414.0" style="-fx-background-color: blue;" text="DECLARATION D'INTERUPTION" textFill="WHITE">
+                                            <font>
+                                                <Font size="21.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="paneRouteur" accessibleText="paneYaounde" layoutX="-1.0" layoutY="1.0" prefHeight="702.0" prefWidth="1174.0" style="-fx-background-color: #d3cccc;">
+                            <children>
+                                <Label fx:id="nomRouteur" alignment="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="38.0" prefWidth="182.0" style="-fx-background-color: white;" text="ROUTEUR" textFill="#221c1c">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                                <AnchorPane layoutX="14.0" layoutY="54.0" prefHeight="41.0" prefWidth="1115.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <Label layoutX="66.0" layoutY="15.0" prefHeight="26.0" prefWidth="33.0" text="De" />
+                                        <JFXDatePicker layoutX="103.0" layoutY="11.0" />
+                                        <Label layoutX="312.0" layoutY="14.0" prefHeight="26.0" prefWidth="21.0" text="A" />
+                                        <JFXDatePicker layoutX="337.0" layoutY="9.0" />
+                                        <JFXComboBox fx:id="ComboxRouteur" layoutX="597.0" layoutY="10.0" prefHeight="26.0" prefWidth="182.0" promptText="------critère-----" />
+                                        <JFXButton fx:id="btnRechercheRouteur" buttonType="RAISED" layoutX="793.0" layoutY="11.0" onAction="#handlerRechercheRouteur" prefHeight="26.0" prefWidth="148.0" ripplerFill="#371de0" style="-fx-background-color: #371de0;" text="Recherche" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="11.0" layoutY="107.0" prefHeight="555.0" prefWidth="1115.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <BarChart fx:id="chartRouteurInterup" layoutX="-1.0" layoutY="54.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de frequence d'interuption">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartRouteurIndispo" layoutX="-1.0" layoutY="314.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation de taux d'indisponibilite">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartRouteurPenaliteSite" layoutX="591.0" layoutY="314.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation du taux de pénalité par site">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartRouteurBandePassante" layoutX="599.0" layoutY="54.0" prefHeight="260.0" prefWidth="502.0" title="Diagramme de variation bande passante">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <JFXButton fx:id="btnAjouterBandePassanteRouteur" layoutX="635.0" layoutY="5.0" onAction="#ajouterBantePassanteRouteur" prefHeight="38.0" prefWidth="414.0" style="-fx-background-color: blue;" text="AJOUTER BANDE PASSANTE" textFill="WHITE">
+                                            <font>
+                                                <Font size="21.0" />
+                                            </font>
+                                        </JFXButton>
+                                        <JFXButton fx:id="btnDeclarationInteruptionRouteur" layoutX="43.0" layoutY="5.0" onAction="#declarationInteruptionRouteur" prefHeight="38.0" prefWidth="414.0" style="-fx-background-color: blue;" text="DECLARATION D'INTERUPTION" textFill="WHITE">
+                                            <font>
+                                                <Font size="21.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="paneTabBboard" accessibleRole="NODE" accessibleText="paneTabBboard" prefHeight="702.0" prefWidth="1174.0" style="-fx-background-color: #d3cccc;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label alignment="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="38.0" prefWidth="182.0" style="-fx-background-color: white;" text="Tableau de board" textFill="#221c1c">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                                <AnchorPane layoutX="14.0" layoutY="55.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="41.0" prefWidth="1115.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <Label layoutX="66.0" layoutY="10.0" prefHeight="26.0" prefWidth="33.0" text="De" />
+                                        <JFXDatePicker layoutX="103.0" layoutY="6.0" style="-fx-cursor: HAND;" />
+                                        <Label layoutX="341.0" layoutY="10.0" prefHeight="26.0" prefWidth="21.0" text="A" />
+                                        <JFXDatePicker layoutX="366.0" layoutY="5.0" style="-fx-cursor: HAND;" />
+                                        <JFXComboBox fx:id="ComboxTabBord" layoutX="660.0" layoutY="7.0" prefHeight="26.0" prefWidth="182.0" promptText="------critère-----" style="-fx-cursor: HAND;" />
+                                        <JFXButton fx:id="btnRechercheTab" buttonType="RAISED" layoutX="856.0" layoutY="9.0" onAction="#handlerRechercherTab" prefHeight="26.0" prefWidth="148.0" ripplerFill="#371de0" style="-fx-cursor: HAND; -fx-background-color: blue;" text="Recherche" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="anchorVariation" cache="true" cacheHint="SPEED" layoutX="12.0" layoutY="104.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="594.0" prefWidth="1115.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <BarChart fx:id="chartIndisponi" legendVisible="false" prefHeight="289.0" prefWidth="523.0" title="Diagramme de variation de taux d'indisponibilité par site">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartBandePassante" layoutX="1.0" layoutY="307.0" prefHeight="284.0" prefWidth="523.0" title="Diagramme de variation de bande passante par site">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <BarChart fx:id="chartPenalite" layoutX="587.0" layoutY="302.0" prefHeight="288.0" prefWidth="526.0" title="Diagramme de variation du taux de pénalité par site">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </BarChart>
+                                        <Pane fx:id="paneView" layoutX="592.0" prefHeight="269.0" prefWidth="523.0">
+                                        </Pane>
+                                    </children>
+                                    <padding>
+                                        <Insets top="5.0" />
+                                    </padding>
+                                </AnchorPane>
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+            </center>
+            <bottom>
+                <AnchorPane prefHeight="40.0" prefWidth="905.0" style="-fx-background-color: #d3cccc;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane layoutX="630.0" layoutY="5.0" prefHeight="31.0" prefWidth="291.0" style="-fx-background-color: #ffff;">
+                            <children>
+                                <Label layoutX="72.0" layoutY="1.0" prefHeight="30.0" prefWidth="160.0" text="2019 ALL Rights Reserved">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

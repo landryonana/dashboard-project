@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorBandePassante" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="851.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retailsfinal1.BandePassanteController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="142.0" layoutY="14.0" prefHeight="46.0" prefWidth="490.0" text="ENTRER BANDE PASSANTE">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="textDateBandePassane" layoutX="141.0" layoutY="124.0" prefHeight="37.0" prefWidth="214.0" />
+      <Label layoutX="93.0" layoutY="123.0" prefHeight="37.0" prefWidth="48.0" text="DATE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textValueBandePassane" layoutX="142.0" layoutY="198.0" prefHeight="37.0" prefWidth="214.0" />
+      <Label layoutX="459.0" layoutY="123.0" prefHeight="37.0" prefWidth="59.0" text="HEURE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textHeureBandePassane" layoutX="518.0" layoutY="123.0" prefHeight="37.0" prefWidth="214.0" />
+      <Label layoutX="16.0" layoutY="198.0" prefHeight="37.0" prefWidth="127.0" text="BANDE PASSANTE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="455.0" layoutY="194.0" prefHeight="37.0" prefWidth="67.0" text="FICHIER">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnFileBandePassante" layoutX="518.0" layoutY="194.0" mnemonicParsing="false" onAction="#choseFileHandler" prefHeight="37.0" prefWidth="214.0" text="Telecharger fichier">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Button>
+      <JFXButton fx:id="btnEnregistrerBandePassanet" buttonType="RAISED" layoutX="374.0" layoutY="330.0" onMouseClicked="#AjouterBandePassante" prefHeight="37.0" prefWidth="183.0" style="-fx-background-color: blue;" text="ENREGISTRER" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <TextArea fx:id="pathFileBandePassante" layoutX="518.0" layoutY="247.0" prefHeight="42.0" prefWidth="214.0" />
+      <Label fx:id="labelError" alignment="CENTER" layoutX="110.0" layoutY="60.0" prefHeight="30.0" prefWidth="635.0" style="-fx-text-fill: red;">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
